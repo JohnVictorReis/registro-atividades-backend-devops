@@ -49,7 +49,7 @@ jobs:
   update-gitops:
     needs: build-and-push
     runs-on: ubuntu-latest
-    if: github.event == 'push'
+    if: github.event_name == 'push'
     steps:
       - name: Checkout GitOps repo
         uses: actions/checkout@v4
